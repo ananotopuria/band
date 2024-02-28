@@ -21,6 +21,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  z-index: 999;
 }
 
 .navigation {
@@ -137,12 +138,20 @@ body {
 
 .slider-slide {
   width: 100%;
+  height: 100vh;
   display: none;
 }
 
 .slider-img {
   width: 100vw;
   height: auto;
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .slider-slide.active {
@@ -158,10 +167,66 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.slider-txt-header{
+.slider-txt-header {
   font-size: 3rem;
+  font-weight: 400;
 }
-.slider-txt-p{
+.slider-txt-p {
   font-size: 2rem;
   margin-top: 1rem;
+}
+
+/* band section */
+.band {
+  width: 100%;
+  height: 100vh;
+}
+
+.band-members {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.band-description {
+  height: 50vh;
+  max-width: 90rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.band-title {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  color: #222;
+  letter-spacing: 0.5rem;
+}
+.band-subtitle {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #666;
+}
+.band-txt {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.9;
+}
+
+.member-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.band-name{
+  font-size: 2rem;
 }
