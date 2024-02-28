@@ -1,8 +1,18 @@
-const search = document.querySelector(`.search`);
-const btn = document.querySelector(`.btn`);
-const input = document.querySelector(`.input`);
+import { initializeSearch } from "./search.js";
 
-btn.addEventListener(`click`, () => {
-  search.classList.toggle(`active`);
-  input.focus();
+initializeSearch();
+
+import { showSlide, nextSlide } from "./slider.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slider-slide");
+
+  function updateSlide() {
+    showSlide(currentSlide, slides);
+    currentSlide = nextSlide(currentSlide, slides);
+  }
+
+  updateSlide();
+  setInterval(updateSlide, 3000);
 });
